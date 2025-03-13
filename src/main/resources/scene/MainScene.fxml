@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.MediaView?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.janindarukshan.mediaplayer.controller.MainSceneController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.janindarukshan.mediaplayer.controller.MainSceneController">
+    <children>
+        <AnchorPane fx:id="anchrPaneMediaView" prefHeight="450.0" prefWidth="800.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <MediaView fx:id="mdView" fitHeight="450.0" fitWidth="800.0" onDragDropped="#mdViewOnDragDropped" onDragOver="#mdViewOnDragOver" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <ImageView fx:id="imgVideo" fitHeight="110.0" fitWidth="110.0" layoutX="230.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/video-icon-1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="imgMusic" fitHeight="110.0" fitWidth="110.0" layoutX="466.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/music-icon-1.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+        <AnchorPane fx:id="anchrPaneControls" layoutY="450.0" prefHeight="150.0" prefWidth="800.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+            <children>
+                <HBox prefHeight="10.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Slider fx:id="sldrProgress" prefHeight="16.0" prefWidth="800.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Slider>
+                    </children>
+                </HBox>
+                <Label fx:id="lblName" layoutY="28.0" prefHeight="32.0" prefWidth="261.0" text="-------------" AnchorPane.leftAnchor="0.0" />
+                <Label fx:id="lblProgress" alignment="CENTER" contentDisplay="TOP" layoutX="261.0" layoutY="28.0" prefHeight="32.0" prefWidth="127.0" text="--|--" AnchorPane.leftAnchor="261.0" />
+                <ImageView fx:id="imgFile" fitHeight="45.0" fitWidth="45.0" layoutX="735.0" layoutY="28.0" onMouseClicked="#imgOnMousedClicked" onMouseEntered="#imgOnMouseEntered" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/folder-1.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="imgPlay" fitHeight="55.0" fitWidth="55.0" layoutX="372.5" layoutY="70.0" onMouseClicked="#imgOnMousedClicked" onMouseEntered="#imgOnMouseEntered" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/play-button-1.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="imgStop" fitHeight="45.0" fitWidth="45.0" layoutX="442.5" layoutY="75.0" onMouseClicked="#imgOnMousedClicked" onMouseEntered="#imgOnMouseEntered" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/stop-button-1.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <ImageView fx:id="imgPause" fitHeight="45.0" fitWidth="45.0" layoutX="312.5" layoutY="75.0" onMouseClicked="#imgOnMousedClicked" onMouseEntered="#imgOnMouseEntered" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/pause-button-1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="imgVolume1" fitHeight="45.0" fitWidth="45.0" layoutX="559.0" layoutY="75.0" onMouseClicked="#imgOnMousedClicked" onMouseEntered="#imgOnMouseEntered" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/volume-1.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <Slider fx:id="sldrVolume" layoutX="618.0" layoutY="90.0" value="50.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Slider>
+            </children></AnchorPane>
+    </children>
 </AnchorPane>

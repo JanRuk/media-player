@@ -1,0 +1,11 @@
+.anchor-pane {
+    /*-fx-background-color: rgb(111, 143, 142);*/
+    -fx-background-color: #0A192F;
+    -fx-border-width: 4px;
+}
+
+.label {
+    -fx-text-fill: #F0F0F0;
+}
+
+
