@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.media.MediaView?>
 
-<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.janindarukshan.mediaplayer.controller.MainSceneController">
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/MainScene.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep13.fx.controller.MainSceneController">
     <children>
         <AnchorPane fx:id="anchrPaneMediaView" prefHeight="450.0" prefWidth="800.0" styleClass="anchor-pane" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
